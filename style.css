@@ -100,6 +100,7 @@ span {
 }
 .sidebar a {
   text-decoration: none;
+  color: #000000;
 }
 
 .sidebar li:hover {
@@ -147,6 +148,9 @@ footer {
 }
 #medias {
   word-spacing: 30px;
+}
+#medias a{
+  color: black;
 }
 .subscribe{
   text-align: right;
