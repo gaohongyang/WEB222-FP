@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>WEB222 Store | Contact Us</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/c4ce7b64aa.js"></script>
+    </head>
+    <body>
+        <header>
+        <div id="headerdisplay">
+            <div id="logo">
+            <img src="images/logo.jpg" alt="logo" />
+            </div>
+            <div class="company">
+            <p id="company_name">Amazing Travel Company</p>
+            <p id="company_description">
+                Our company is one of the most popular travel companies in China.<br />
+                Check out our roster of trips and start making a (very long) list. <br />
+                We guarantee you'll run out of time before China runs out of things for you to fill it
+                with.
+            </p>
+            </div>
+        </div>
+        </header>
+        <main>
+        <div class="sidebar">
+            <ul>
+            <li id="main-page">
+                <a href="/index.html" target="_blank"><i class="material-icons md-75">home</i><span>Main</span></a>
+            </li>
+            </ul>
+        </div>
+
+        <div class="container border-bottom border-dark pb-5">
+            <form action="https://httpbin.org/post" method="POST">
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="name">Name</label>
+                        <input
+                            class="form-control"
+                            name="name"
+                            id="name"
+                            type="text"
+                            autocomplete="name"
+                            autofocus
+                            tabindex="1"
+                            required
+                        >
+                    </div>
+                    <div class="form-group col">
+                        <label for="email">Email Address</label>
+                        <input
+                            class="form-control"
+                            name="email"
+                            id="email"
+                            type="text"
+                            pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$"
+                            autocomplete="email"
+                            tabindex="2"
+                            required
+                        >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="address">Address</label>
+                        <input
+                            class="form-control"
+                            name="address"
+                            id="address"
+                            type="text"
+                            autocomplete="street-address"
+                            tabindex="3"
+                            required
+                        >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="city">City</label>
+                        <input
+                            class="form-control"
+                            name="city"
+                            list="city"
+                            autocomplete="address-level2"
+                            tabindex="4"
+                            required
+                        >
+                        <datalist id="city">
+                            <option>Toronto</option>
+                            <option>Vancouver</option>
+                            <option>Montreal</option>
+                            <option>Victoria</option>
+                            <option>Halifax</option>
+                            <option>Calgary</option>
+                            <option>Ottawa</option>
+                            <option>Edmonton</option>
+                            <option>Mississauga</option>
+                            <option>Winnipeg</option>
+                            <option>Quebec City</option>
+                        </datalist>
+                    </div>
+                    <div class="form-group col">
+                        <label for="postal-code">Postal Code</label>
+                        <input
+                            class="form-control"
+                            name="postal-code"
+                            id="postal-code"
+                            autocomplete="postal-code"
+                            type="text"
+                            tabindex="5"
+                            placeholder="A1A 2B2"
+                            pattern="^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="selection" id="question" value="question" checked tabindex="6">
+                        <label class="form-check-label" for="question">Question</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="selection" id="comment" value="comment" tabindex="7">
+                        <label class="form-check-label" for="comment">Comment</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="selection" id="order-problem" value="order-problem" tabindex="8">
+                        <label class="form-check-label" for="order-problem">Order Problem</label>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col" id="active-click" style="display: none;">
+                        <input
+                            id="order-number"
+                            class="form-control"
+                            name="order-number"
+                            type="text"
+                            placeholder="Please Enter Your Order Number Here..."
+                            aria-describedby="number-desc"
+                            tabindex="9"
+                        >
+                        <small class="form-text text-muted">Required</small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col">
+                        <textarea
+                            id="message"
+                            class="form-control"
+                            name="message"
+                            rows="10"
+                            tabindex="10"
+                            placeholder="Say Something Here..."
+                            required
+                        ></textarea>
+                    </div>
+                </div>
+
+                <input type="hidden" id="student-name" name="student-name" value="Hongyang Gao">
+
+                <div class="d-flex flex-row-reverse mt-3">
+                    <input class="btn btn-primary" type="submit" name="submit" value="Submit" tabindex="11">
+                    <input class="btn btn-success mr-4" type="reset" name="reset" value="Reset" tabindex="12">
+                </div>
+            </form>
+        </div>
+        </main>
+
+        <footer>
+            <div class="subscribe">
+            <form id="subscribe" action="https://formspree.io/f/mleoprdw" method="POST">
+                <label for="use-email"></label>
+                <input
+                id="user-email"
+                name="email"
+                type="text"
+                autocomplete="email"
+                placeholder="email@address.com"
+                pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                required
+                >
+                <input type="submit" name="subscribe" value="Subscribe">
+            </form>
+            </div>
+            <p>
+            Social Medias:
+            </p>
+            <div id="medias">
+            <a href="https://web222.ca/" target="_blank"
+                ><i class="fab fa-facebook-square fa-2x"></i
+            ></a>
+            <a href="https://web222.ca/" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://web222.ca/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://web222.ca/" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+            <div>
+            <p>
+                Name: Hongyang Gao<br />
+                Student ID: 119422194<br />
+                Email: <a href="mailto:hgao42@myseneca.ca">hgao42@myseneca.ca</a>
+            </p>
+            </div>
+            <p>
+            This page is last edited on
+            <time datetime="2020-11-29 13:35:00">November 29<sup>th</sup>, 2020, at 01:35 (EDT)</time>
+            </p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        <script>
+            let active = document.querySelector('#order-problem');
+            let require = document.querySelector('#order-number');
+            active.addEventListener('click', function(){
+                let action = document.querySelector('#active-click');
+                action.style.display = 'block';
+                require.setAttribute("required","");
+            });
+            let hide1 = document.querySelector('#question')
+            hide1.addEventListener('click', function(){
+                let action = document.querySelector('#active-click');
+                action.style.display = 'none';
+                require.removeAttribute("required");
+            });
+            let hide2 = document.querySelector('#comment')
+            hide2.addEventListener('click', function(){
+                let action = document.querySelector('#active-click');
+                action.style.display = 'none';
+                require.removeAttribute("required");
+            });
+        </script>
+    </body>
+</html>
