@@ -35,10 +35,6 @@ body {
   font-family: 'Nerko One', cursive;
   text-align: center;
   margin-left: 5%;
-  background-image: -webkit-linear-gradient(bottom, rgb(0, 0, 0), #ff0000, rgb(111, 0, 255));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 #company_name {
   margin-top: 0;
